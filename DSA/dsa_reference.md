@@ -1,7 +1,7 @@
 # Reference of DSA
 
 * 學習資源
-  * [Problem Solving with Algorithms and Data Structures using Python](http://interactivepython.org/runestone/static/pythonds/index.html)([中文](https://facert.gitbooks.io/python-data-structure-cn/))
+  * [Problem Solving with Algorithms and Data Structures using Python](http://interactivepython.org/runestone/static/pythonds/index.html) ([中文](https://facert.gitbooks.io/python-data-structure-cn/))
   * [数据结构与算法/leetcode/lintcode题解](https://xuan.gitbooks.io/leetcode/content/zh-cn/index.html)
   * [leetcode分类总结](https://lefttree.gitbooks.io/leetcode-categories/content/)
   * [LeetCode题解](https://siddontang.gitbooks.io/leetcode-solution/content/index.html)
