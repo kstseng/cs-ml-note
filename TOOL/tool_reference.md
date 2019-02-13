@@ -1,4 +1,4 @@
-# Reference of =Tool
+# Reference of Tool
 
 * Git
 * Docker
