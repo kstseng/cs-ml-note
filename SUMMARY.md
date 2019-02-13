@@ -9,4 +9,4 @@
     * [參考資料](ML/ml_reference.md) 
     
 * [其他工具](OTHER/README.md)
-    * [參考資料](OTHER/other_tool_reference.md) 
+    * [參考資料](TOOL/tool_reference.md) 
