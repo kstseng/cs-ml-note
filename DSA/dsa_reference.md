@@ -7,3 +7,5 @@
     
 * 好文
     * [我的算法学习之路](http://zh.lucida.me/blog/on-learning-algorithms/)
+    * [程序员必读书单 1.0](http://zh.lucida.me/blog/developer-reading-list/)
+    
