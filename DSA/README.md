@@ -1,3 +1,3 @@
 # Data Structure and Algorithm
 
-* [參考資料](dsa_reference.md)
+* [參考資料](./dsa_reference.md)
