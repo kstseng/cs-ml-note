@@ -1,6 +1,6 @@
 # Summary
 
-* [簡介](readme.md)
+* [簡介](README.md)
 
 * [資料結構與演算法](DSA/README.md)
 
