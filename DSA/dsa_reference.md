@@ -8,4 +8,5 @@
 * 好文
     * [我的算法学习之路](http://zh.lucida.me/blog/on-learning-algorithms/)
     * [程序员必读书单 1.0](http://zh.lucida.me/blog/developer-reading-list/)
+    * [白板编程浅谈——Why, What, How](http://lucida.me/blog/whiteboard-coding-demystified/?fbclid=IwAR2pNC_obLvgfRXgIJGtgRP41ztggKK6cJy3ggrnNrlAFOAYwnsuq-DnUQ0)
     
