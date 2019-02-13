@@ -6,7 +6,6 @@
     * [leetcode分类总结](https://lefttree.gitbooks.io/leetcode-categories/content/)
     * [LeetCode题解](https://siddontang.gitbooks.io/leetcode-solution/content/index.html)
     * [LeetCode-Python](https://shenjie1993.gitbooks.io/leetcode-python/)
-    
 * 好文
     * [我的算法学习之路](http://zh.lucida.me/blog/on-learning-algorithms/)
     * [程序员必读书单 1.0](http://zh.lucida.me/blog/developer-reading-list/)
