@@ -1,13 +1,16 @@
 # Define Class
 
-### Outline
+## Outline
 
-* [Code]
+* [Code](#code)
     * [Define Class](#define-code)
     * [Inheritance: Logic Gates and Circuits](#inheritance)
-* Other Notes
+* [Other Notes](#other-notes)
     * [Comparison of @instancemethod, @classmethod, @staticmethod](comparison-of-instancemethod-classmethod-staticmethod)
     * [Shallow equality and Deep equality](#shallow-equality-and-deep-equality)
+
+
+### Code
 
 #### Define Class
 
@@ -21,6 +24,8 @@ def maine
 ```python
 
 ```
+
+### Other Notes
 
 #### Comparison of instancemethod, classmethod, staticmethod
 [ref in stackoverflow](https://stackoverflow.com/questions/136097/what-is-the-difference-between-staticmethod-and-classmethod)
