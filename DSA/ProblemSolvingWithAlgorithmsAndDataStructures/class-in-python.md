@@ -6,7 +6,7 @@
     * [Define Class](#define-code)
     * [Inheritance: Logic Gates and Circuits](#inheritance)
 * [Other Notes](#other-notes)
-    * [Comparison of @instancemethod, @classmethod, @staticmethod](comparison-of-instancemethod-classmethod-staticmethod)
+    * [Comparison of @instancemethod, @classmethod, @staticmethod](comparison-of-instancemethod-classmethod-and-staticmethod)
     * [Shallow equality and Deep equality](#shallow-equality-and-deep-equality)
 
 
@@ -94,7 +94,7 @@ if __name__ == '__main__':
 
 ### Other Notes
 
-#### Comparison of instancemethod, classmethod, staticmethod
+#### Comparison of instancemethod, classmethod and staticmethod
 [ref in stackoverflow](https://stackoverflow.com/questions/136097/what-is-the-difference-between-staticmethod-and-classmethod)
 
 ```python
