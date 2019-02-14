@@ -51,7 +51,6 @@ class Fraction:
         val2 = self.den * other_fraction.num
         return val1 == val2
 
-    
     @classmethod
     def get_gcd(cls, m, n):
         """ 為了得到最簡分數
