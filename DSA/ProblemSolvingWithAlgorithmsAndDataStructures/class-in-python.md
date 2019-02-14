@@ -18,7 +18,7 @@ def maine
     * [ref](https://stackoverflow.com/questions/136097/what-is-the-difference-between-staticmethod-and-classmethod)
 
 #### Shallow equality and Deep equality
-* 
+ 
 
 df
 d
