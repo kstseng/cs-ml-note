@@ -3,9 +3,16 @@
 ## Outline
 
 * [Code](#code)
-    * [Define Class](#define-class)
-    * [Inheritance: Logic Gates and Circuits](#inheritance)
+    * [Anagram Detection](#anagram-detection)
 * [Other Notes](#other-notes)
     * [Comparison of @instancemethod, @classmethod, @staticmethod](#comparison-of-instancemethod-classmethod-and-staticmethod)
-    * [Shallow equality and Deep equality](#shallow-equality-and-deep-equality)
+
+
+### Code
+
+#### Anagram Detection
+
+亂序字串檢查
+
+
 
