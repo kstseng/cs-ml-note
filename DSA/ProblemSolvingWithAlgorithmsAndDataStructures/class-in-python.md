@@ -2,9 +2,44 @@
 
 ### Outline
 
-* Code
+* [Code](#<heading-code>)
 * Comparison of @instancemethod, @classmethod, @staticmethod
 * Shallow equality and Deep equality
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
