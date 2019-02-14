@@ -13,7 +13,7 @@
 
 #### Define Class
 
-[link](https://github.com/kstseng/dsa-ml-tool-note/blob/master/DSA/ProblemSolvingWithAlgorithmsAndDataStructures/CODE/ClassInPython/define_class.py)
+[code in github](https://github.com/kstseng/dsa-ml-tool-note/blob/master/DSA/ProblemSolvingWithAlgorithmsAndDataStructures/CODE/ClassInPython/define_class.py)
 
 ```python
 class Fraction:
