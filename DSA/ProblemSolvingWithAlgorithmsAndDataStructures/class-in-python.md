@@ -1,15 +1,25 @@
 # Define Class
 
+### Outline
 
+* Code
+* Comparison of @instancemethod, @classmethod, @staticmethod
+* Shallow equality and Deep equality
+
+
+
+#### Code
 
 ```python
 def maine
 
 ```
 
-* class method, static method
+#### Comparison of @instancemethod, @classmethod, @staticmethod
+    
     * [ref](https://stackoverflow.com/questions/136097/what-is-the-difference-between-staticmethod-and-classmethod)
-* shallow equality and Deep equality
+
+#### Shallow equality and Deep equality
 * 
 
 
