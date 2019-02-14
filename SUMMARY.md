@@ -3,7 +3,7 @@
 * [簡介](README.md)
 
 * [資料結構與演算法](DSA/README.md)
-    * [DSA-in-Python](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/README.md)
+    * [Problem Solving with Algorithms and DataStructures](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/README.md)
         * [Class in Python](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/class-in-python.md)
     * [參考資料](DSA/dsa_reference.md) 
     
