@@ -6,7 +6,7 @@
     * [Define Class](#define-code)
     * [Inheritance: Logic Gates and Circuits](#inheritance)
 * [Other Notes](#other-notes)
-    * [Comparison of @instancemethod, @classmethod, @staticmethod](comparison-of-instancemethod-,-classmethod-,-staticmethod)
+    * [Comparison of @instancemethod, @classmethod, @staticmethod](comparison-of-instancemethod-classmethod-staticmethod)
     * [Shallow equality and Deep equality](#shallow-equality-and-deep-equality)
 
 
