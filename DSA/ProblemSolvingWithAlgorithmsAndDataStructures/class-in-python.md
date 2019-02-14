@@ -89,6 +89,10 @@ if __name__ == '__main__':
 
 #### Inheritance
 
+[code in github](https://github.com/kstseng/dsa-ml-tool-note/blob/master/DSA/ProblemSolvingWithAlgorithmsAndDataStructures/CODE/ClassInPython/inheritance.py)
+
+
+
 ```python
 
 ```
