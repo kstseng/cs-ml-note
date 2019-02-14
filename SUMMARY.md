@@ -3,8 +3,9 @@
 * [簡介](README.md)
 
 * [資料結構與演算法](DSA/README.md)
-    * [Problem Solving with Algorithms and DataStructures](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/README.md)
-        * [Class in Python](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/class-in-python.md)
+    * [Problem Solving with Algorithms and Data Structures](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/README.md)
+        * [1. Introduction (define class)](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/class-in-python.md)
+        * [2. Analysis](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/analysis.md)
     * [參考資料](DSA/dsa_reference.md) 
     
 * [機器學習算法](ML/README.md)

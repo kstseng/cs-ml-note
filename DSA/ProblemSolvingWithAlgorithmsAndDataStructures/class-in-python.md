@@ -1,4 +1,4 @@
-# Define Class
+# Introduction (Define Class)
 
 ## Outline
 
