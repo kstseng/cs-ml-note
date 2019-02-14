@@ -6,7 +6,7 @@
 * Comparison of @instancemethod, @classmethod, @staticmethod
 * Shallow equality and Deep equality
 
-#### Code
+#### Cod
 
 ```python
 def maine
@@ -20,4 +20,36 @@ def maine
 #### Shallow equality and Deep equality
 * 
 
+df
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+
+#### Code
 
