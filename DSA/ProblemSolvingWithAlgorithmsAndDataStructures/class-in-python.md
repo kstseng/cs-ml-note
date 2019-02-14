@@ -15,7 +15,6 @@
 #### Define Class
 
 ```python
-
 class Fraction:
     def __init__(self, top, bottom):
         """ 初始化
