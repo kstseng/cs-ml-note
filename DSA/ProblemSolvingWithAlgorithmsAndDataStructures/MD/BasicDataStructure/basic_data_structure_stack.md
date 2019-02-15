@@ -6,8 +6,8 @@
 * [Implementation](#implementation)
     * [Stack Class](#stack-class)
     * [Balanced Parentheses (括號匹配)](#balanced-parentheses)
-    * [General Infix-to-Postfix Conversion (十進位轉二進位)](#general-infix-to-postfix-conversion)
-    * [Postfix Evaluation (中缀，前缀和后缀表達式)](#postfix-evaluation)
+    * [Converting Decimal Numbers to Binary Numbers (十進位轉二進位)](#converting-decimal-numbers-to-binary-numbers)
+    * [Infix, Prefix and Postfix Expressions (前缀、中缀和后缀表達式)](#infix-prefix-and-postfix-expressions)
 
 
 ### Notes
@@ -156,13 +156,13 @@ def parChecker(symbolString):
         return False
 ```
 
-#### General Infix-to-Postfix Conversion
+#### Converting Decimal Numbers to Binary Numbers
 
 ```python
 test
 ```
 
-#### Postfix Evaluation
+#### Infix, Prefix and Postfix Expressions
 
 ```python
 test
