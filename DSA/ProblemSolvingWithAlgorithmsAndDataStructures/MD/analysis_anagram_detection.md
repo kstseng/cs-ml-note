@@ -108,9 +108,11 @@ def anagramSolution2(s1, s2):
 
 ##### Brute Force
 
+```python
 生成 s1 的所有亂序字串列表，然後檢查是否存在 s2。
 複雜度為 n \* (n-1) \* (n-2) \* ... \* 3 \* 2 \* 1，亦即 O(n!)
 O(n!) 會比 n^2 成長還快。
+```
 
 ##### Count and Compare
 
