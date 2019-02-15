@@ -4,9 +4,14 @@
 
 * [資料結構與演算法](DSA/README.md)
     * [Problem Solving with Algorithms and Data Structures](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/README.md)
-        * [1. Introduction (Define Class)](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/class-in-python.md)
-        * 2. Analysis
-            * [2.1 Anagram Detection Example](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/analysis_anagram_detection.md)
+        * [1. Introduction (Define Class)](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/class-in-python.md)
+        * [2. Analysis (Anagram Detection)](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/analysis_anagram_detection.md)
+        * 3\. Basic Data Strucuture
+            * [Stack]()
+            * [Queue]()
+            * [Deque]()
+            * [List]()
+            * [Ordered List]()
 
     * [參考資料](DSA/dsa_reference.md) 
     
