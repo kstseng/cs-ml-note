@@ -14,6 +14,8 @@
 
 ### Code
 
+[code in github](https://github.com/kstseng/dsa-ml-tool-note/blob/master/DSA/ProblemSolvingWithAlgorithmsAndDataStructures/CODE/Analysis/anagram_detection.py)
+
 #### Anagram Detection
 
 亂序字串檢查
@@ -37,7 +39,7 @@
 
 ```
 
-##### Checking Off
+##### Count and Compare
 
 ```python
 
