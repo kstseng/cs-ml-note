@@ -8,9 +8,6 @@
         * [Solution 2: Sort and Compare](#sort-and-compare)
         * [Solution 3: Brute Force](#brute-force)
         * [Solution 4: Count and Compare](#count-and-compare)
-* [Other Notes](#other-notes)
-    * [Comparison of @instancemethod, @classmethod, @staticmethod](#comparison-of-instancemethod-classmethod-and-staticmethod)
-
 
 ### Code
 
