@@ -6,7 +6,7 @@
 
 ### 種類：
 
-* Stack
-* Queue
-* Deque
-* List
+* [Stack](./basic_data_structure_stack.md)
+* [Queue](./basic_data_structure_queue.md)
+* [Deque](./basic_data_structure_deque.md)
+* [List](./basic_data_structure_list.md)
