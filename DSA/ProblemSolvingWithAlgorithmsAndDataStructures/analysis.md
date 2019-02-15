@@ -27,7 +27,18 @@
 
 ##### Sort and Compare
 
+```python
+
+```
+
 ##### Brute Force
+
+```python
+
+```
 
 ##### Checking Off
 
+```python
+
+```
