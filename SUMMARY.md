@@ -1,6 +1,6 @@
 # Summary
 
-* [簡介](README.md)
+* [介紹](README.md)
 
 * [資料結構與演算法](DSA/README.md)
     * [Problem Solving with Algorithms and Data Structures](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/README.md)
