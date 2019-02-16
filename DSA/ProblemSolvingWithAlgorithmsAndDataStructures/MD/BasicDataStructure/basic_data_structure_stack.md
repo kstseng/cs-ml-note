@@ -24,7 +24,7 @@
 
 ### Implementation
 
-[code in github](https://github.com/kstseng/dsa-ml-tool-note/blob/master/DSA/ProblemSolvingWithAlgorithmsAndDataStructures/CODE/BasicDataStructure/stack.py)
+[code in github](https://github.com/kstseng/dsa-ml-tool-note/blob/master/DSA/ProblemSolvingWithAlgorithmsAndDataStructures/CODE/BasicDataStructure)
 
 #### Stack Class
 
@@ -158,8 +158,58 @@ def parChecker(symbolString):
 
 #### Converting Decimal Numbers to Binary Numbers
 
+* 筆記：連續除法
+
+```
+13 = 1 + 2(6) = 
+     1 + 2(0 + 2(3)) = 
+     1 + 2(0 + 2(1 + 2(1))) = 
+     1*2^0 + 0*2^1 + 1*2^2 + 1*2(3)
+
+==> 1101    
+```
+
+* 程式
+
 ```python
-test
+def divideBy2(decNumber):
+    """
+    概念：最先除 2 所得的餘數，再建立二進位字串的時候，是最後加入（建立字串時為由左至右）
+    """
+    remainder_stack = Stack()
+
+    while decNumber > 0:
+        rem = decNumber % 2
+        remainder_stack.push(rem)
+        decNumber = decNumber // 2
+    
+    ## 建立 binary string
+    bin_string = ""
+    while not remainder_stack.isEmpty():
+        bin_string += str(remainder_stack.pop())
+    
+    return bin_string
+
+
+def baseConverter(decNumber, base):
+    """
+    """
+    if base < 2 or base > 16:
+        raise ValueError('base should between 2 and 16')
+
+    digits = "0123456789ABCDEF"
+    remainder_stack = Stack()
+
+    while decNumber > 0:
+        rem = decNumber % base
+        remainder_stack.push(rem)
+        decNumber = decNumber // base
+    
+    bin_string = ""
+    while not remainder_stack.isEmpty():
+        bin_string += digits[remainder_stack.pop()]
+    
+    return bin_string
 ```
 
 #### Infix, Prefix and Postfix Expressions
