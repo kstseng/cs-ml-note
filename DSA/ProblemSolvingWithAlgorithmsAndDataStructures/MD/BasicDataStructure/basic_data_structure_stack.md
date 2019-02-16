@@ -7,7 +7,7 @@
     * [Stack Class](#stack-class)
     * [Balanced Parentheses (括號匹配)](#balanced-parentheses)
     * [Converting Decimal Numbers to Binary Numbers (十進位轉二進位)](#converting-decimal-numbers-to-binary-numbers)
-    * [Infix, Prefix and Postfix Expressions (前缀、中缀和后缀表達式)](#infix-prefix-and-postfix-expressions)
+    * [Infix, Prefix and Postfix Expressions (中缀、前缀和后缀表達式)](#infix-prefix-and-postfix-expressions)
 
 
 ### Notes
@@ -158,6 +158,8 @@ def parChecker(symbolString):
 
 #### Converting Decimal Numbers to Binary Numbers
 
+十進位轉二進位
+
 * 筆記：連續除法
 
 ```
@@ -213,6 +215,8 @@ def baseConverter(decNumber, base):
 ```
 
 #### Infix, Prefix and Postfix Expressions
+
+中綴、前綴與後綴表達式
 
 ```python
 test
