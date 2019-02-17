@@ -6,7 +6,7 @@
 * [Implementation](#implementation)
     * [Queue Class](#queue-class)
     * [Simulation: Hot Potato (燙手山芋)](#hot-potato)
-    * [Balanced Parentheses (括號匹配)](#balanced-parentheses)
+    * [Simulation: Printing Tasks (打印機)](#printing-tasks)
 
 ### Notes
 
@@ -57,3 +57,11 @@ class Queue:
 ```
 
 #### Hot Potato
+
+```python
+```
+
+#### Printing Tasks
+
+```python
+```
