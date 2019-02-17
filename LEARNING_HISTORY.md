@@ -2,19 +2,19 @@
 
 1. DSA
 
-   1. Problem Solving with Algorithms and Data Structures \(in python\)
+   * Problem Solving with Algorithms and Data Structures \(in python\)
+      
+      | Chapter | Check | Date |
+      | :---: | :---: | :---: |
+      | ch 1 | v | 2019-02-10 |
+      | ch 2 | v | 2019-02-13 |
+      | ch 3 |  |  |
+      | ch 4 |  |  |
+      | ch 5 |  |  |
+      | ch 6 |  |  |
+      | ch 7 |  |  |
 
-      1. | Chapter | Check | Date |
-         | :---: | :---: | :---: |
-         | ch 1 | v | 2019-02-10 |
-         | ch 2 | v | 2019-02-13 |
-         | ch 3 |  |  |
-         | ch 4 |  |  |
-         | ch 5 |  |  |
-         | ch 6 |  |  |
-         | ch 7 |  |  |
-
-   2. 算法 \(第四版\)
+   * 算法 \(第四版\)
 
 2. Machine Learning
 
