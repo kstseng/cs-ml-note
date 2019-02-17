@@ -58,7 +58,27 @@ class Queue:
 
 #### Hot Potato
 
+約瑟夫問題：把最前面的人叫出來後，重新排隊，該步驟執行 `num` 次後，把當前最前面的人去除。
+
 ```python
+def hotPotato(namelist, num):
+    """ 約瑟夫問題
+    """
+    simqueue = Queue()
+    for name in namelist:
+        simqueue.enqueue(name)
+    
+    ## 當還存在至少兩個人時
+    while simqueue.size() > 1:
+        for i in range(num):
+            ## 把排在 front 的人叫出來，並把它排到 rear
+            ## (叫出來後重新排隊)
+            item_to_dequeued = simqueue.dequeue()
+            simqueue.enqueue(item_to_dequeued)
+        ## 當執行 num 次，把 front 的人去除
+        simqueue.dequeue()
+    
+    return simqueue.dequeue()
 ```
 
 #### Printing Tasks
