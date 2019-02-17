@@ -36,6 +36,7 @@ class Queue:
         enqueue (入隊) 的複雜度為 O(n)
         dequeue (出隊) 的複雜度為 O(1)
     """
+    
     def __init__(self):
         self.items = []
 
@@ -54,6 +55,7 @@ class Queue:
     
     def size(self):
         return len(self.items) 
+
 ```
 
 #### Hot Potato
