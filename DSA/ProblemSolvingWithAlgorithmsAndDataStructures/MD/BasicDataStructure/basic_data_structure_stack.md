@@ -216,14 +216,137 @@ def baseConverter(decNumber, base):
 
 #### Infix, Prefix and Postfix Expressions
 
-中綴、前綴與後綴表達式
+中綴、前綴與後綴表達式。
+此處只練習**中綴轉後綴**與**後綴求值**。
 
 * 筆記
 
-
+    * 中綴轉後綴：由於運算符號有可能因為優先次序不同，而需要反轉，便可利用Stack 的特性，讓最頂項始終是最近保存的運算符號。參考 `A * B + C * D` 的運算過程。
+    * 後綴求值：由於是用後綴表達式，在碰到運算符號時，最靠近運算符號的兩個數，也就是`後`加入的兩個數要`先`進行運算。因此使用 Stack。
 
 * 程式
 
 ```python
-test
+def infixToPostfix(infixexpr):
+    """ 中綴轉後綴
+    infixexpr = "A * B + C * D"
+
+    範例：
+    
+    1. 
+        infixexpr = A * B + C
+
+        | current | postfixList | opStack |
+        |---------|-------------|---------| 
+        | A       | A           | []      |
+        | *       | A           | [*]     |
+        | B       | AB          | [*]     |
+        | +       | AB*         | [+]     |
+        | C       | AB*C        | [+]     |
+
+        ==> AB*C+
+
+    2. 
+        infixexpr = (A + B) * C
+
+        | current | postfixList | opStack |
+        |---------|-------------|---------| 
+        | (       |             | [(]     |
+        | A       | A           | [(]     |
+        | +       | A           | [(, +]  |
+        | B       | AB          | [(, +]  |
+        | )       | AB+         | []      |
+        | *       | AB+         | [*]     |
+        | C       | AB+C        | [*]     |
+
+        ==> AB+C*
+
+    3. 
+        infixexpr = A * B + C * D
+
+        | current | postfixList | opStack |
+        |---------|-------------|---------| 
+        | A       | A           |         |
+        | *       | A           | [*]     |
+        | B       | AB          | [*]     |
+        | +       | AB*         | [+]     |
+        | C       | AB*C        | [+]     |
+        | *       | AB*C        | [+, *]  |
+        | D       | AB*CD       | [+, *]  |
+
+        ==> AB*CD*+
+    """
+    prec = {}
+    prec["*"] = 3
+    prec["/"] = 3
+    prec["+"] = 2
+    prec["-"] = 2
+    prec["("] = 1
+    opStack = Stack()
+    postfixList = []
+    tokenList = infixexpr.split()
+
+    for token in tokenList:
+        if token in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" or token in "0123456789":
+            ## 假設是字母或是數字，則直接 append 
+            postfixList.append(token)
+        elif token == '(':
+            ## 把 "(" 記起來，以便紀錄當遇到 ")" 時，需操作所有在括弧內的運算。
+            opStack.push(token)
+        elif token == ')':
+            ## 把屬於這組括弧內的操作清空，直到遇到最上層的右括號為止
+            ## (利用最上層的右括弧作為停止點)
+            topToken = opStack.pop()
+            while topToken != '(':
+                postfixList.append(topToken)
+                topToken = opStack.pop()
+        else:
+            ## 基本運算符號
+            while not opStack.isEmpty() and (prec[opStack.peek()] >= prec[token]):
+                ## 若當前的 token 順位比 opStack 中的 pop 操作符來得小，
+                ## 則需要先把 opStack 的 pop item 先放到 postfixList 中
+                ## ==> 代表先進行 opStack 優先次序高的操作
+                ##
+                ## eg: A * B + C
+                ## 當 token 是 '+'，而 top token 是 "*"
+                ## 則需要先操作 top token ==> 把 '*' 加入 postfixList
+                postfixList.append(opStack.pop())
+            opStack.push(token)
+        
+    while not opStack.isEmpty():
+        postfixList.append(opStack.pop())
+    
+    return "".join(postfixList)
+
+def postfixEval(postfixExpr):
+    """ 後綴求值
+    """
+    operandStack = Stack()
+    tokenList = postfixExpr.split()
+
+    for token in tokenList:
+        if token in "0123456789":
+            operandStack.push(int(token))
+        else:
+            ## 一但碰到運算符號，則取 Stack 最後兩個數字進行運算
+            ## 然後再附加回原來的 stack，以便做後續的運算
+            topOperand = operandStack.pop()
+            secondOperand = operandStack.pop()
+            result = doMath(token, topOperand, secondOperand)
+            operandStack.push(result)
+    return operandStack.pop()
+
+def doMath(token, operand1, operand2):
+    """
+    """
+    if token == "+":
+        return operand1 + operand2
+    elif token == "-":
+        return operand1 - operand2
+    elif token == "*":
+        return operand1 * operand2
+    elif token == "/":
+        return operand1 / operand2
+    else:
+        ValueError("Token is not recognizable.")
 ```
