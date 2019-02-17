@@ -1,4 +1,4 @@
-# 學習紀錄
+# 學習筆記
 
 ### 目的
 
@@ -7,6 +7,11 @@
 ### 位置
 * [github 網址](https://github.com/kstseng/dsa-ml-tool-note)
 * [gitbook 網址](https://kstseng.gitbooks.io/dsa-ml-tool-notes/)
+
+
+### 歷史紀錄
+
+* [learning history](./LEARNING_HISTORY.md)
 
 
 
