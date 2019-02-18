@@ -67,5 +67,27 @@ class Deque:
 
 迴文檢查：正著念和反著念都是相同的句子
 
-例如：`上海自來水來自海上`、`abcdcba`。
+例如：`上海自來水來自海上`、`abcdcba`、`radar`。
 
+概念：把字串存入 Deque 後，比較 `front` 和 `rear` 是否相同。
+
+
+```python
+def palchecker(aString):
+    """
+    """
+    ## 把 aString 存入一個 Deque
+    chardeque = Deque()
+    for char in aString:
+        chardeque.addFront(char)
+    
+    stillMatching = True
+    ## 如果 deque 的長度大於 1 () => 字串可能為單數，eg: radar
+    while chardeque.size() > 1 and stillMatching:
+        front_char = chardeque.removeFront()
+        rear_char = chardeque.removeRear()
+        if front_char != rear_char:
+            stillMatching = False
+    
+    return stillMatching
+```
