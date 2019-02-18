@@ -1,39 +1,20 @@
-# Basic Data Structure - List
-
-## Outline
-
-* [Unordered List](#unordered-list)
-* [Ordered List](#ordered-list)
-
-## Unordered List
-
-* 基本操作：
-    * add(item): 向 list 新增一個項
-    * remove(item): 從 list 刪除該項
-    * search(item): 搜尋 list 中的項目，並反回布林值
-    * isEmpty(): 檢查 list 是否為空
-    * size(): list 的項數
-    * append(item): 在 list 中的末尾新增一個項目
-    * index(item): 返回該項在 list 中的位置
-    * insert(pos, item): 在位置 pos 處新增此項
-    * pop(): 刪除並回傳最後一項
-    * pop(pos): 刪除並回傳位置為 pos 的項
-
-* 實現：
-    * 利用 `Linked List` 來紀錄跟確保 `item` 的相對位置。在明確給定第一項的位置後，便可知道下一項。
-    * `Linked List` 的基本構造是 `Node`
-
-* 注意：在新增或是刪除時，調用的順序很重要。
-    * 新增：
-        * 從**頭項**新增項目：新項目相對於其他項目的位置不重要，因為都已經紀錄在 `getNext` 中。所以選擇要選最容易新增的位置；而 Linked List 都只有入口，所以選擇在頭項加入
-        * 要先將新項 `setNext` 為 `head`；再將 `head` 指向新項。若順序相反，則原先 head 之後的項都會因此斷掉。
-    * 刪除：
-        * 利用 `current` 和 `previous`。
-        * 若還沒找到，在移動 `current` 和 `previous` 時，要先將 `previous` 移到 `current`，再把 `current` 移到下一個 Node。
-
-* 程式
-
-```python
+class Node:
+    def __init__(self, initdata):
+        self.data = initdata
+        self.next = None
+    
+    def getData(self):
+        return self.data
+    
+    def getNext(self):
+        return self.next
+    
+    def setData(self, newdata):
+        self.data = newdata
+    
+    def setNext(self, newnext):
+        self.next = newnext
+    
 class UnorderedList:
     def __init__(self):
         self.head = None
@@ -97,6 +78,17 @@ class UnorderedList:
             ## 其他情況：越過 current (刪除)
             ## 若欲刪除的是最後一項，仍適用
             previous.setNext(current.getNext())
-```
 
-## Ordered List
+def main():
+    unordered_list = UnorderedList()
+    unordered_list.add(10)
+    unordered_list.add(20)
+    unordered_list.add(4)
+    unordered_list.add(7)
+
+    assert unordered_list.search(5) == False
+    unordered_list.size()
+    unordered_list.remove(4)
+
+if __name__ == "__main__":
+    main()
