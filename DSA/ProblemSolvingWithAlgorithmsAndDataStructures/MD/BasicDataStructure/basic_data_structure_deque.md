@@ -5,7 +5,7 @@
 * [Notes](#notes)
 * [Implementation](#implementation)
     * [Deque Class](#deque-class)
-    * [Simulation: Hot Potato (燙手山芋)](#hot-potato)
+    * [Palindrome-Checker (迴文檢查)](#palindrome-checker)
     * [Simulation: Printing Tasks (打印機)](#printing-tasks)
 
 ### Notes
@@ -30,3 +30,42 @@
 [code in github](https://github.com/kstseng/dsa-ml-tool-note/blob/master/DSA/ProblemSolvingWithAlgorithmsAndDataStructures/CODE/BasicDataStructure)
 
 #### Deque Class
+
+複雜度：
+* 從前面 (Front) 新增和刪除項是 O(1)
+* 從後面 (Rear) 新增和刪除項是 O(n)
+
+```python
+class Deque:
+    """
+    從前面 (Front) 新增和刪除項是 O(1)
+    從後面 (Rear) 新增和刪除項是 O(n)
+    """
+    def __init__(self):
+        self.items = []
+
+    def isEmpty(self):
+        return self.items == []
+    
+    def addFront(self, item):
+        self.items.append(item)
+    
+    def addRear(self, item):
+        self.items.insert(0, item)
+    
+    def removeFront(self):
+        return self.items.pop()
+    
+    def removeRear(self):
+        return self.items.pop(0)
+    
+    def size(self):
+        return len(self.size)
+```
+
+#### Palindrome-Checker
+
+迴文檢查：正著念和反著念都是相同的句子
+
+例如：`上海自來水來自海上`、`abcdcba`。
+
