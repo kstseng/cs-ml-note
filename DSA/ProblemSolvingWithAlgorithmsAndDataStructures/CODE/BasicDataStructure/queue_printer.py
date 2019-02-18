@@ -73,6 +73,7 @@ def simulation(numSeconds, pagesPerMinute):
     print("Average Wait {} secs {} tasks remaining".format(averageWait, printQueue.size()))
 
 def newPrintTask():
+    ## 每一秒會有任務的機率是 1 / 180
     num = random.randrange(1, 181)
     if num == 180:
         return True
