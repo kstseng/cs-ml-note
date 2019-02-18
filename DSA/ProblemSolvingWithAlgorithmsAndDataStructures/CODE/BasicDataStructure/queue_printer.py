@@ -20,10 +20,13 @@ class Printer:
     def __init__(self, ppm):
         self.pagerate = ppm
         self.currentTask = None
+        ## 完成某任務所剩餘的時間
         self.timeRemaining = 0
     
     def tick(self):
+        ## 有任務在身
         if self.currentTask != None:
+            ## 每經過一秒，除了時間點更新外，任務剩餘時間也少一秒
             self.timeRemaining -= 1
             if self.timeRemaining <= 0:
                 self.currentTask = None
@@ -36,6 +39,7 @@ class Printer:
     
     def startNext(self, newtask):
         self.currentTask = newtask
+        ## 計算此任務所需的時間
         self.timeRemaining = newtask.getPages() * 60 / self.pagerate
 
 class Task:
@@ -50,6 +54,7 @@ class Task:
         return self.pages
     
     def waitTime(self, currenttime):
+        ## 當前的時間 減去 該任務被創建的時間
         return currenttime - self.timestamp
 
 def simulation(numSeconds, pagesPerMinute):
@@ -59,14 +64,20 @@ def simulation(numSeconds, pagesPerMinute):
 
     for currentSecond in range(numSeconds):
         if newPrintTask():
+            ## 有沒有新任務產生
             task = Task(currentSecond)
             printQueue.enqueue(task)
         
+        ## 如果影印機不忙，而且仍有任務
         if (not labprinter.busy()) and (not printQueue.isEmpty()):
+            ## 則取出下一個任務
             nexttask = printQueue.dequeue()
+            ## 計算所需的等待時間
             watingtimes.append(nexttask.waitTime(currentSecond))
+            ## 計算此任務所需的執行時間，也就是所需的剩餘時間
             labprinter.startNext(nexttask)
         
+        ## 如果有任務在身，則更新該任務所需的剩餘時間
         labprinter.tick()
     
     averageWait = sum(watingtimes) / len(watingtimes)
