@@ -6,7 +6,6 @@
 * [Implementation](#implementation)
     * [Deque Class](#deque-class)
     * [Palindrome-Checker (迴文檢查)](#palindrome-checker)
-    * [Simulation: Printing Tasks (打印機)](#printing-tasks)
 
 ### Notes
 
