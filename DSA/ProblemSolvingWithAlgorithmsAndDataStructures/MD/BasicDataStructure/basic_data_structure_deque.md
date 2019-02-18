@@ -10,10 +10,10 @@
 
 ### Notes
 
-```
-Rear ==> [item_1, item_2, item_3, ..., item_n] <== Front
-```
-
+1. 示意圖
+    ```
+    Rear ==> [item_1, item_2, item_3, ..., item_n] <== Front
+    ```
 1. 概念：不限制新增或刪除資料的方式 => 可從 front 新增或刪除資料，亦可從 rear 新增或刪除資料，
 1. 應用：
 1. 基本操作：

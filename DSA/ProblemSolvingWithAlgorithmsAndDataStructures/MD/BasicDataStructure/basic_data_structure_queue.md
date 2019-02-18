@@ -10,10 +10,10 @@
 
 ### Notes
 
-```
-Rear ==> [item_1, item_2, item_3, ..., item_n] <== Front
-```
-
+1. 示意圖
+    ```
+    Rear ==> [item_1, item_2, item_3, ..., item_n] <== Front
+    ```
 1. 概念：先進先出 (First-In-First-Out, FIFO)，想像成**排隊**。添加新項的一端稱為 `Rear`，刪除項目的一端稱為 `Front`。
 1. 應用：多個程序進行。
 1. 基本操作：
