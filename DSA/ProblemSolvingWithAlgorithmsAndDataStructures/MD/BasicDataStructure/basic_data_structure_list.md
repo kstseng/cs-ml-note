@@ -35,6 +35,17 @@
     * 利用 `current` 和 `previous`。
     * 若還沒找到，在移動 `current` 和 `previous` 時，要先將 `previous` 移到 `current`，再把 `current` 移到下一個 Node。
 
+* 複雜度分析：
+    * isEmpty(): O(1)
+    * size(): O(n)
+    * add():
+        * Unordered List: O(1)
+        * Ordered List: O(n)
+    * search():
+        * Unordered List: O(n)
+        * Ordered List: O(n)
+
+
 ## Unordered List
 
 * 程式
