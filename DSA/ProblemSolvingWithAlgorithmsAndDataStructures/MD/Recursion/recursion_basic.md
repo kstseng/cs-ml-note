@@ -13,5 +13,36 @@
 #### Calculating the Sum of a List of Numbers
 計算整數列表之和
 
+* `For loop`
+
+```python
+def listsumLoop(numList):
+    total = 0
+    for i in range(len(numList)):
+        total += numList[i]
+    
+    return total
+```
+
+* `Recursion`
+
+```
+listsum(numList) = first(numList) + rest(numList)
+```
+
+```python
+def listsumRecursion(numList):
+    """ 
+    """
+    if len(numList) == 1:
+        ## base case (函數的「例外條款」)
+        return numList[0]
+    else:
+        total = numList[0] + listsumRecursion(numList[1:])
+
+    return total
+```
+
+
 ### Converting an Integer to a String in Any Base
 整數轉換為任意進位字串符
