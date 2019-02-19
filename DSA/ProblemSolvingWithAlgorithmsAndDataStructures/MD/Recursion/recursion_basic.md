@@ -8,6 +8,10 @@
 
 ## The Three Laws of Recursion
 
+1. 遞迴算法必須要有基本情況。(A recursive algorithm must have a base case.)
+2. 遞迴算法必須改變其狀態，並向基本情況靠近。(A recursive algorithm must change its state and move toward the base case.)
+3. 遞迴算法必須以遞迴方式呼叫自身。(A recursive algorithm must call itself, recursively.)
+
 ## Simple Problem
 
 #### Calculating the Sum of a List of Numbers
