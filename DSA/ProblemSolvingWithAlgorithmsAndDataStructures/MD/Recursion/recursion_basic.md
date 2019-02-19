@@ -17,6 +17,8 @@
 #### Calculating the Sum of a List of Numbers
 計算整數列表之和
 
+[Code]()
+
 * `For loop`
 
 ```python
