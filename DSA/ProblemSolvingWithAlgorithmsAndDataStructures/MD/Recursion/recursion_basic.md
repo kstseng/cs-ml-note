@@ -5,6 +5,7 @@
 * [暖身小範例](#simple-problem)
  * [計算整數列表和](#calculating-the-sum-of-a-list-of-numbers)
  * [整數轉換為任意進位字串符](#converting-an-integer-to-a-string-in-any-base)
+* [遞迴視覺化 - 烏龜](#recursion_visualization)
 
 ## The Three Laws of Recursion
 
@@ -117,3 +118,6 @@ def toStrStack(n, base):
     
     return res
 ```
+
+### Recursion Visualization
+
