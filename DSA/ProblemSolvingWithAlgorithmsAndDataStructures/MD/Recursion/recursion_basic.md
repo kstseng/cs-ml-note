@@ -17,7 +17,7 @@
 #### Calculating the Sum of a List of Numbers
 計算整數列表之和
 
-[Code]()
+[Github](https://github.com/kstseng/dsa-ml-tool-note/blob/master/DSA/ProblemSolvingWithAlgorithmsAndDataStructures/CODE/Recursion/recursion_sum_of_list.py)
 
 * `For loop`
 
