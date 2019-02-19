@@ -5,7 +5,7 @@
    * Problem Solving with Algorithms and Data Structures \(in python\)
       * ~~ch 1~~: `2019-02-10`
       * ~~ch 2~~: `2019-02-13`
-      * ch 3
+      * ~~ch 3~~: `2019-02-18`
       * ch 4
       * ch 5
       * ch 6
