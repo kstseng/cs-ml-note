@@ -107,6 +107,73 @@ class UnorderedList:
 
 ## Ordered List
 
+* 筆記：只差在 `add` 和 `search`
+    * `search`: 因為是排序，所以若當前的 item 已經大於要找的 item，便可停止。
+    * `add`: Unordered List 因為無排序關係，所以為求方便，都統一加在`頭`。但 Ordered List 有順序關係，所以要遍尋整個 Ordered List，並利用 `previous` 來紀錄前一個 Node 的資訊，然後再插入要加入的 Node。是 Ordered List 中 `search` 和 `add` 的綜合。
 
+* 程式
 
+```python
+class OrderedList:
+    """ 只在 search 跟 add 上與 UnorderedList 不同
+    """
+    def __init__(self):
+        self.head = None
+    
+    def isEmpty(self):
+        return self.head == None
+    
+    def size(self):
+        count = 0
+        current_node = self.head
+        while current_node != None:
+            count += 1
+            current_node = current_node.getNext()
+        
+        return count
+    
+    def search(self, item):
+        """ 因為是排序，所以當 current 的值大於 item，在後面一定也找不到。
+        """
+        current = self.head
+        found = False
+        stop = False
+        while not found and current != None and not stop:
+            if current.getData() == item:
+                found = True
+            else:
+                if current.getData() > item:
+                    stop = True
+                else:
+                    current = current.getNext()
+        
+        return found
+    
+    def add(self, item):
+        """ 重要!
+        """
+        current = self.head
+        previous = None
+        stop = False
+        ## 先找到要放置的節點
+        while current != None and not stop:
+            if current.getData() > item:
+                stop = True
+            else:
+                previous = current
+                current = current.getNext()
+                
+        ## 找到後，再執行替換動作
+        temp = Node(item)
 
+        if previous == None:
+            ## 要加入的 item 是最小，要擺在最前面
+            ## ==> 像 Unordered List 的 add 一樣
+            temp.setNext(self.head)
+            self.head = temp
+        else:
+            ## 發生在 Ordered List 的中間
+            temp.setNext(current)
+            previous.setNext(temp)
+
+```

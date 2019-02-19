@@ -79,16 +79,111 @@ class UnorderedList:
             ## 若欲刪除的是最後一項，仍適用
             previous.setNext(current.getNext())
 
+class OrderedList:
+    """ 只在 search 跟 add 上與 UnorderedList 不同
+    """
+    def __init__(self):
+        self.head = None
+    
+    def isEmpty(self):
+        return self.head == None
+    
+    def size(self):
+        count = 0
+        current_node = self.head
+        while current_node != None:
+            count += 1
+            current_node = current_node.getNext()
+        
+        return count
+    
+    def search(self, item):
+        """ 因為是排序，所以當 current 的值大於 item，在後面一定也找不到。
+        """
+        current = self.head
+        found = False
+        stop = False
+        while not found and current != None and not stop:
+            if current.getData() == item:
+                found = True
+            else:
+                if current.getData() > item:
+                    stop = True
+                else:
+                    current = current.getNext()
+        
+        return found
+    
+    def add(self, item):
+        """ 重要!
+        """
+        current = self.head
+        previous = None
+        stop = False
+        ## 先找到要放置的節點
+        while current != None and not stop:
+            if current.getData() > item:
+                stop = True
+            else:
+                previous = current
+                current = current.getNext()
+                
+        ## 找到後，再執行替換動作
+        temp = Node(item)
+
+        if previous == None:
+            ## 要加入的 item 是最小，要擺在最前面
+            ## ==> 像 Unordered List 的 add 一樣
+            temp.setNext(self.head)
+            self.head = temp
+        else:
+            ## 發生在 Ordered List 的中間
+            temp.setNext(current)
+            previous.setNext(temp)
+
+def printList(alist):
+    """ 印出 list 內的所有 item
+    """
+    current = alist.head
+    while current != None:
+        print(current.data)
+        current = current.getNext()
+
 def main():
+    ## 
+    ## Unorder List
+    ##
     unordered_list = UnorderedList()
     unordered_list.add(10)
     unordered_list.add(20)
     unordered_list.add(4)
     unordered_list.add(7)
+    print("Original unordered List")
+    printList(unordered_list)
 
     assert unordered_list.search(5) == False
     unordered_list.size()
     unordered_list.remove(4)
+    ##
+    print("Unordered List after remove 4")
+    printList(unordered_list)
 
+    ##
+    ## Unorder List
+    ##
+    ordered_list = OrderedList()
+    ordered_list.add(10)
+    ordered_list.add(20)
+    ordered_list.add(30)
+    ordered_list.add(40)
+    print("Original ordered List")
+    printList(ordered_list)
+
+    assert ordered_list.search(5) == False
+    ordered_list.add(25)
+    ## 確認是否加入後仍是 Ordered List
+    print("Ordered List after add 25")
+    printList(ordered_list)
+    
 if __name__ == "__main__":
     main()
