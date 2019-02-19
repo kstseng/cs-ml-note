@@ -13,6 +13,12 @@
       * [Queue](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/BasicDataStructure/basic_data_structure_queue.md)
       * [Deque](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/BasicDataStructure/basic_data_structure_deque.md)
       * [List](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/BasicDataStructure/basic_data_structure_list.md)
+    * [4. Recursion](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/Recursion/README.md)
+      * [Basic](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/Recursion/recursion_basic.md)
+      * Example
+        * [Tower of Hanoi]()
+        * [Exploring a Maze]()
+        * [Dynamic Programming]()
 
   * [參考資料](DSA/dsa_reference.md)
 
@@ -23,8 +29,8 @@
 * [其他工具](OTHER/README.md)
 
   * [參考資料](TOOL/tool_reference.md) 
-* [學習紀錄](/LEARNING_HISTORY.md)
 
+* [學習紀錄](/LEARNING_HISTORY.md)
 
 
 
