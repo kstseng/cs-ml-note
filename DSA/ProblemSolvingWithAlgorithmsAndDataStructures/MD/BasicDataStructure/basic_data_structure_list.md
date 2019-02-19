@@ -36,15 +36,16 @@
     * 若還沒找到，在移動 `current` 和 `previous` 時，要先將 `previous` 移到 `current`，再把 `current` 移到下一個 Node。
 
 * 複雜度分析：
-    * isEmpty(): O(1)
-    * size(): O(n)
-    * add():
-        * Unordered List: O(1)
-        * Ordered List: O(n)
-    * search():
-        * Unordered List: O(n)
-        * Ordered List: O(n)
+    * `isEmpty`: `O(1)`
+    * `size`: `O(n)`
+    * `add`:
+        * Unordered List: `O(1)`
+        * Ordered List: `O(n)`
+    * `search`:
+        * Unordered List: `O(n)`
+        * Ordered List: `O(n)`，雖然平均只要 Unordered List 的一半，但最壞狀況仍是 `O(n)`
 
+* 附註：Python `list` 的實現方式並不是 Liked List，是使用 `notion of an array` (數組)。
 
 ## Unordered List
 
