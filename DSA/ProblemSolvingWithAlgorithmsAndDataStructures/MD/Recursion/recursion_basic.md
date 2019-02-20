@@ -8,6 +8,7 @@
 * [遞迴視覺化 - 烏龜](#recursion_visualization)
  * [螺旋](#draw-sprial)
  * [樹](#tree)
+* [Sierpinski Triangle](#sierpinski-triangle)
 
 ## The Three Laws of Recursion
 
@@ -188,3 +189,6 @@ myWin = turtle.Screen()
 t.left(90)
 tree(75, t)
 ```
+
+#### Sierpinski Triangle
+
