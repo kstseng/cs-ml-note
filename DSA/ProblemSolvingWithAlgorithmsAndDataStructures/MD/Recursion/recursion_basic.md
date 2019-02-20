@@ -6,6 +6,8 @@
  * [計算整數列表和](#calculating-the-sum-of-a-list-of-numbers)
  * [整數轉換為任意進位字串符](#converting-an-integer-to-a-string-in-any-base)
 * [遞迴視覺化 - 烏龜](#recursion_visualization)
+ * [螺旋](#draw-sprial)
+ * [樹](#tree)
 
 ## The Three Laws of Recursion
 
@@ -53,6 +55,8 @@ def listsumRecursion(numList):
 
 ### Converting an Integer to a String in Any Base
 整數轉換為任意進位字串符
+
+[Github](https://github.com/kstseng/dsa-ml-tool-note/blob/master/DSA/ProblemSolvingWithAlgorithmsAndDataStructures/CODE/Recursion/recursion_converting_int_to_str.py)
 
 * 遞迴
 
@@ -121,3 +125,56 @@ def toStrStack(n, base):
 
 ### Recursion Visualization
 
+先不要執行，去想想看會怎麼畫。
+
+[Github](https://github.com/kstseng/dsa-ml-tool-note/blob/master/DSA/ProblemSolvingWithAlgorithmsAndDataStructures/CODE/Recursion/recursion_turtle.py)
+
+#### Draw Sprial
+
+```python
+import turtle
+
+def drawSprial(myTurtle, lineLen):
+    """
+    """
+    if lineLen > 0:
+        myTurtle.forward(lineLen)
+        myTurtle.right(45)
+        drawSprial(myTurtle, lineLen - 5)
+
+## run
+myTurtle = turtle.Turtle()
+myWin = turtle.Screen()
+
+drawSprial(myTurtle, 100)
+myWin.exitonclick()
+
+```
+
+#### Tree
+
+```python
+import turtle
+
+def tree(branchLen, t):
+    if branchLen > 5:
+        t.forward(branchLen)
+        ## 先右轉 20 度
+        t.right(20)
+        tree(branchLen - 15, t)
+        ## 再左轉 40 度
+        t.left(40)
+        tree(branchLen - 15, t)
+        ## 再回到原先角度
+        t.right(20)
+        ## 退回到原先的起始點
+        t.backward(branchLen)
+
+## run
+t = turtle.Turtle()
+myWin = turtle.Screen()
+## 預設是面向右邊
+## 因此把他左轉 90 度
+t.left(90)
+tree(75, t)
+```
