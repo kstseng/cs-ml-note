@@ -5,13 +5,6 @@
 * 章節
  * [Basic](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/Recursion/recursion_basic.md)
  * Example
-   * [Tower of Hanoi](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/Recursion/recursion\_tower\_of\_hanoi.md)
-   * [Exploring a Maze](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/Recursion/recursion\_exploring\_a\_maze.md)
-   * [Dynamic Programming](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/Recursion/recursion\_dynamic\_programming.md)
-
-
-
-
-
-
-
+   * [Tower of Hanoi](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/Recursion/recursion_tower_of_hanoi.md)
+   * [Exploring a Maze](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/Recursion/recursion_exploring_a_maze.md)
+   * [Dynamic Programming](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/Recursion/recursion_dynamic_programming.md)
