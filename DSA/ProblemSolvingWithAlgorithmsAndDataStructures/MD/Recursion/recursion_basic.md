@@ -153,6 +153,16 @@ myWin.exitonclick()
 
 #### Tree
 
+思考方式：從 base case 往回想。
+
+* `branchLen <= 5`: 長度不足 `5`：停留原地。
+* `前一次呼叫`：
+ * 往前走 `branchLen`
+ * 右轉 20 度並停留原地
+ * 左轉 40 度停留原地，
+ * 退回起始點
+
+
 ```python
 import turtle
 
