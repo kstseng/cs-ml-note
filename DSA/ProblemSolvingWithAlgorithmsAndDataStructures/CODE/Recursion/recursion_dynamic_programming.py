@@ -72,6 +72,7 @@ def recDC(coinValueList, change, knownResult):
     
     return minCoins
 
+'''
 def dpMakeChange(coinValueList, change, minCoins):
     """ dynamica programming
 
@@ -91,8 +92,9 @@ def dpMakeChange(coinValueList, change, minCoins):
                 coinCount = minCoins[cents - c] + 1
         minCoins[cents] = coinCount
     return minCoins[change]
-                
-def dpMakeChangeTrack(coinValueList, change, minCoins, coinsUsed):
+'''
+
+def dpMakeChange(coinValueList, change, minCoins, coinsUsed):
     """ 把 dp 結果紀錄
     """
     for cents in range(change + 1):
@@ -126,7 +128,7 @@ def main():
     coinsCount = [0] * (amnt + 1)
 
     print("Making change for {} requires".format(amnt))
-    print(dpMakeChangeTrack(clist, amnt, coinsCount, coinsUsed))
+    print(dpMakeChange(clist, amnt, coinsCount, coinsUsed))
     print('They are: ')
     printCoins(coinsUsed, amnt)
     print("The used list is as follows: ")
