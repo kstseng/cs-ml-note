@@ -159,7 +159,7 @@ def recDC(coinValueList, change, knownResult):
     return minCoins
 ```
 
-### Dynamic Progamming
+### Dynamic Programming
 
 ##### 概念
 
