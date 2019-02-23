@@ -18,6 +18,10 @@
       * Complex Recursive Problems
         * [Tower of Hanoi](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/Recursion/recursion_tower_of_hanoi.md)
         * [Dynamic Programming](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/Recursion/recursion_dynamic_programming.md)
+    * [5.Sort and Search](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/SortAndSearch/README.md)
+      * [Search](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/SortAndSearch/search.md)
+      * [Sort](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/SortAndSearch/sort.md)
+
 
   * [參考資料](DSA/dsa_reference.md)
 
