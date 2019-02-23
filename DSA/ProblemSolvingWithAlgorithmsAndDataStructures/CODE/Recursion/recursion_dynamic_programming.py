@@ -1,3 +1,24 @@
+def gdMC(change, coinValueList):
+    """ Greedy Search
+    change = 63
+    coinValueList = [1, 5, 10, 20, 21, 25]
+    """
+    numCoins = 0
+    candidates = [c for c in coinValueList if c <= change]
+    coinsUsed = [0] * len(coinValueList)
+    for i in range(len(candidates)):
+        ## 從最大的硬幣開始找
+        idx = (len(candidates) - 1) - i
+        c = candidates[idx]
+        while change >= c:
+            ## 當 change 大於等於「不大於 change」的最大硬幣
+            ## 則開始兌換
+            change -= c
+            numCoins += 1
+            coinsUsed[idx] += 1
+
+    return sum(numCoins)
+
 def recMC(coinValueList, change):
     """
     coinValueList = [1, 5, 10, 25]
