@@ -2,10 +2,8 @@ def recMC(coinValueList, change):
     """
     coinValueList = [1, 5, 10, 25]
     change = 63
-
     usage: 
         recMC([1,5,10,25],63)
-
     概念：
     numCoins = min(
         1 + numCoins(original_amount - 1), 
@@ -33,7 +31,6 @@ def recMC(coinValueList, change):
 def recDC(coinValueList, change, knownResult):
     """
     不是動態規劃 => 記憶化 (緩存) memoization / caching
-
     usage: 
         recDC([1,5,10,25],63,[0]*64)
     """
@@ -54,3 +51,66 @@ def recDC(coinValueList, change, knownResult):
     
     return minCoins
 
+def dpMakeChange(coinValueList, change, minCoins):
+    """ dynamica programming
+
+    coinValueList = [1, 5, 10, 20]
+    change = 64
+
+    舉例：以 change = 5 去思考
+    """
+    ## 當 change = 5
+    for cents in range(change + 1):
+        ## 最差狀況（全部由 $1 元組成）
+        coinCount = cents
+        ## candidates = [1, 5]
+        candidates = [c for c in coinValueList if c <= cents]
+        for c in candidates:
+            if minCoins[cents - c] + 1 < coinCount:
+                coinCount = minCoins[cents - c] + 1
+        minCoins[cents] = coinCount
+    return minCoins[change]
+                
+def dpMakeChangeTrack(coinValueList, change, minCoins, coinsUsed):
+    """ 把 dp 結果紀錄
+    """
+    for cents in range(change + 1):
+        coinCount = cents
+        newCoin = 1
+        candidates = [c for c in coinValueList if c <= cents]
+        for c in candidates:
+            if minCoins[cents - c] + 1 < coinCount:
+                ## 紀錄硬幣數量
+                coinCount = minCoins[cents - c] + 1
+                ## 紀錄最後一個加上的硬幣金額
+                newCoin = c
+        minCoins[cents] = coinCount
+        coinsUsed[cents] = newCoin
+    return minCoins[change]
+
+def printCoins(coinsUsed, change):
+    """
+    """
+    coin = change
+    while coin > 0:
+        ## 因為 coinsUsed 是記錄最後一個加上去的硬幣金額
+        thisCoin = coinsUsed[coin]
+        print(thisCoin)
+        coin -= thisCoin
+
+def main():
+    amnt = 63
+    clist = [1, 5, 10, 21, 25]
+    coinsUsed  = [0] * (amnt + 1)
+    coinsCount = [0] * (amnt + 1)
+
+    print("Making change for {} requires".format(amnt))
+    print(dpMakeChangeTrack(clist, amnt, coinsCount, coinsUsed))
+    print('They are: ')
+    printCoins(coinsUsed, amnt)
+    print("The used list is as follows: ")
+    print(coinsUsed)
+    #print(coinsCount)
+
+if __name__ == "__main__":
+    main()
