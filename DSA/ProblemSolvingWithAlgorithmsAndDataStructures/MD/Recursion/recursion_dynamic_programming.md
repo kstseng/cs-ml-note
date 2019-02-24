@@ -1,15 +1,13 @@
 # Dynamic Programming
 
-- [範例：硬幣找零](#example)
-- [概念](#concept)
-- [解法](#solution)
-  - [貪婪法 Greedy Search](#greedy-search)
-  - [遞迴 Recursion](#recursion)
-  - [遞迴加上快取（ 記憶化 ）Recursion with Caching ( Memorization )](#recursion-with-caching) : 自頂向下
-  - [動態規劃 Dynamic Programming](#dynamic-programming) : 自底向上
-- [參照](#reference)
-
-
+* [範例：硬幣找零](#example)
+* [概念](#concept)
+* [解法](#solution)
+  * [貪婪法 Greedy Search](#greedy-search)
+  * [遞迴 Recursion](#recursion)
+  * [遞迴加上快取（ 記憶化 ）Recursion with Caching \( Memorization \)](#recursion-with-caching) : 自頂向下
+  * [動態規劃 Dynamic Programming](#dynamic-programming) : 自底向上
+* [參照](#reference)
 
 ## Example
 
@@ -17,8 +15,8 @@
 
 變數命名：
 
-- 要換的錢：change
-- 零錢種類：coinValueList
+* 要換的錢：change
+* 零錢種類：coinValueList
 
 ## Concept
 
@@ -28,13 +26,13 @@
 
 2. 遞迴概念：
 
-   1. Base Case: 假設 change 可以在 coinValueList 找到 => 直接兌換，且硬幣數為 1。
+   1. Base Case: 假設 change 可以在 coinValueList 找到 =&gt; 直接兌換，且硬幣數為 1。
 
-   2. Other Case: 假設 change 在 coinVlauList 找不到 => 
+   2. Other Case: 假設 change 在 coinVlauList 找不到 =&gt;
 
       ```
       numCoins(change) = min(
-      	1 + numCoins(change - 1), 
+          1 + numCoins(change - 1), 
           1 + numCoins(change - 5), 
           1 + numCoins(change - 10), 
           1 + numCoins(change - 25)
@@ -74,7 +72,7 @@ def gdMC(change, coinValueList):
 
 ```
 numCoins(change) = min(
-	1 + numCoins(change - 1), 
+    1 + numCoins(change - 1), 
     1 + numCoins(change - 5), 
     1 + numCoins(change - 10), 
     1 + numCoins(change - 25)
@@ -111,12 +109,9 @@ def recMC(coinValueList, change):
             numCoins = 1 + recMC(coinValueList, change - c)
             if numCoins < minCoins:
                 minCoins = numCoins
-        
+
     return minCoins
-
 ```
-
-
 
 ### Recursion with Caching
 
@@ -155,7 +150,7 @@ def recDC(coinValueList, change, knownResult):
                 minCoins = numCoins
                 ## 如果找到更小的硬幣數，則存入 knownResult
                 knownResult[change] = minCoins
-    
+
     return minCoins
 ```
 
@@ -167,29 +162,58 @@ def recDC(coinValueList, change, knownResult):
 
 白話文就是「記住已經求過的解」。
 
+[演算法筆記](http://www.csie.ntnu.edu.tw/~u91029/DynamicProgramming.html)：
+
+```
+Dynamic Programming = Divide and Conquer + Memoization
+```
+
 ###### 附註
 
 動態規劃只能應用在**存在**`最佳子結構`的問題。`最佳子結構`的意思是**局部最佳解**能決定**全域最佳解**。
 
 ###### 自問自答
 
-問：為何在 Recursion with Caching 時，這篇教學不會稱之為動態規劃？
+問：為何在 Recursion with Caching 時，這篇教學不會稱之為動態規劃？但有些介紹會將其認為是動態規劃？
 
-答：動態規劃一般分為「**自頂而下**」和「**自底而上**」兩種形式。而**自頂而下**就是 Recursion with Caching，比較常被稱為記憶法或是備忘錄法，其脈絡為當遇到問題時，先看之前有沒有解決過；**自底而上**則比較被認為是動態規劃，因為其脈絡便是動態規劃的核心概念：**先計算子問題，再由子問題計算父問題**。
+答：動態規劃一般分為「**自頂而下 \(Top-down\)**」和「**自底而上 \(Bottom-up\)**」兩種形式。而**自頂而下**就是 Recursion with Caching，比較常被稱為記憶法或是備忘錄法，其脈絡為當遇到問題時，先看之前有沒有解決過；**自底而上**則比較被認為是動態規劃，因為其脈絡便是動態規劃的核心概念：**先計算子問題，再由子問題計算父問題**。
 
 關鍵字：**自底向上**
 
-##### 筆記
+##### 個人心得
+
+從[演算法筆記](http://www.csie.ntnu.edu.tw/~u91029/DynamicProgramming.html)中的重點記錄如下：
+
+```
+ Dynamic Programming = Divide and Conquer + Memoization
+```
+
+1. 把原問題遞迴分割成許多小問題 \(recurrence, **not** `recursion`\)
+   1. `recurrence` ：子問題與原問題完全相同，只有數值範圍不同
+   2. `recursion` : 在函數定義中使用函數自身的方法
+   3. **\[註\]**：中問都叫遞迴，但意義完全不同。
+2. 再運用記憶法儲存這些答案，避免重複求解，以空間換取時間。
+3. 實作上的兩種方式
+   1. Top-down \(recursion with caching\)
+      1. 好處：不用計較計算順序，因為遞迴結構會迫使先解決最小的問題
+      2. 壞處：
+         1. 因為採用遞迴，會不斷呼叫程序，因此執行效率較差。
+         2. 因為不能控制計算順序，因而無法妥善運用記憶體
+   2. Bottom-up：與 Top-down 互補。
+
+其實從演算法筆記和此篇的原始教學文比對可發現，`Recursion with Caching` 應該也可以被稱為是**動態規劃**中的**自頂而下 (Top-down)**的實作，因為也用到了**問題分解**跟**記憶法**的解決方式。
+
+使用 `Recursion with Caching (Top-down)` 的好處就是直接從大問題下手，而遞迴 (recursion) 的實作方式會迫使先解決小問題，但缺點就是會一直重複呼叫函數，即使是已經有透過記憶法來避免重複運算。
+
+##### 流程分析
 
 1. 當 `change <= 4` 時，candidate 都只有 1，因此都是唯一解。
 2. 當 `change <= 5` 時，candidate 有 `1` 和 `5`，則結果有一個 `5` 或是五個 `1`。因此在表中儲存一個硬幣。
 3. ...
-4. 當 `change <= 11` 時，有三個選項 (`1`, `5`, `10` 元)
+4. 當 `change <= 11` 時，有三個選項 \(`1`, `5`, `10` 元\)
    1. 一個`1`元 + `10` 元的最小硬幣數 = 兩個硬幣
    2. 一個`5`元 + `6` 元的最小硬幣數 = 四個硬幣
    3. 一個`10`元 + `1` 元的最小硬幣數 = 兩個硬幣
-
-
 
 ![](http://interactivepython.org/runestone/static/pythonds/_images/changeTable.png)
 
@@ -248,9 +272,11 @@ def main():
     print("The used list is as follows: ")
     print(coinsUsed)
     #print(coinsCount)
-
 ```
 
 ### Reference
 
-1. [演算法-動態規劃 Dynamic Programming–從菜鳥到老鳥](https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/586686/)
+1. [演算法-動態規劃 Dynamic Programming–從菜鳥到老鳥](https://codertw.com/程式語言/586686/)
+
+
+
