@@ -6,6 +6,7 @@
 - [希爾排序 The Shell Sort](#the-shell-sort)
 - [合併排序 The Merge Sort](#the-merge-sort)
 - [快速排序 The Quick Sort](#the-quick-sort)
+- [總結 Summary](#summary)
 
 ## The Bubble Sort
 
@@ -409,3 +410,21 @@ def partition(alist, first, last):
     return rightmark
 ```
 
+## Summary
+
+- Bubble Sort：
+  - 一句話：第 `k` 輪會將第 `k` 大的值排好。
+  - 優缺點：直覺但效率差
+  - 複雜度： `O(n^2)`
+- Shell Sort：
+  - 一句話：利用 `gap` 優化 Bubble Sort
+  - 附註：`gap` 的設計很重要
+  - 複雜度： `O(n)` ~ `O(n^2)`
+- Merge Sort：
+  - 一句話：分而治之得將子向量排序好後再合併
+  - 優缺點：複雜度降低但需要額外空間儲存子向量。（在要合併的時候）
+  - 複雜度： `O(nlogn)`
+- Quick Sort：
+  - 一句話：分而治之得以樞紐量為基準將向量分區。
+  - 優缺點：複雜度降低且無需額外空間儲存。但若分割點不在列表中間附近，可能會讓複雜度降低到 `O(n)`。
+  - 複雜度： `O(nlogn)`
