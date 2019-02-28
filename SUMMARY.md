@@ -21,6 +21,7 @@
     * [5.Sort and Search](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/SortAndSearch/README.md)
       * [Search](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/SortAndSearch/search.md)
       * [Sort](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/SortAndSearch/sort.md)
+    * [6.Trees and Trees Algorithms](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/TreesAndTreeAlgorithm/)
 
 
   * [參考資料](DSA/dsa_reference.md)
