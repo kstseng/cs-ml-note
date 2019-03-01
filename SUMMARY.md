@@ -22,8 +22,8 @@
       * [Search](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/SortAndSearch/search.md)
       * [Sort](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/SortAndSearch/sort.md)
     * [6.Trees and Trees Algorithms](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/TreesAndTreeAlgorithm/READMD.md)
-     * [Trees (basic)](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/TreesAndTreeAlgorithm/trees_basic.md)
-     * [Trees (Advanced)](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/TreesAndTreeAlgorithm/trees_advanced.md)
+     * [Trees-basic](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/TreesAndTreeAlgorithm/trees_basic.md)
+     * [Trees-Advanced](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/TreesAndTreeAlgorithm/trees_advanced.md)
        * Binary Heaps
 
 
