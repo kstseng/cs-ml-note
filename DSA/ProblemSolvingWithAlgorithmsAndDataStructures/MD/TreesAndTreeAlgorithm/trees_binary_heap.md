@@ -1,6 +1,6 @@
 # Binary Heaps
 
-- [Binary Heaps 簡介](#binary-tree-introduction)
+- [Binary Heaps 簡介](#binary-heaps-introduction)
 - [Binary Heaps 操作](#binary-heaps-operations)
 - [Binary Heaps 實作](#binaryiheaps-implementation)
 
