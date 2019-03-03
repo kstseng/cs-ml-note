@@ -2,7 +2,7 @@
 
 - [Binary Heaps 簡介](#binary-heaps-introduction)
 - [Binary Heaps 操作](#binary-heaps-operations)
-- [Binary Heaps 實作](#binaryiheaps-implementation)
+- [Binary Heaps 實作](#binary-heaps-implementation)
 
 ## Binary Heaps Introduction
 
