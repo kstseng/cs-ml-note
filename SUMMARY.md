@@ -25,6 +25,7 @@
      * [Trees-basic](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/TreesAndTreeAlgorithm/trees_basic.md)
      * [Trees-Advanced](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/TreesAndTreeAlgorithm/trees_advanced.md)
        * [Binary Heaps](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/TreesAndTreeAlgorithm/trees_binary_heap.md)
+       * [Binary Search Tree](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/TreesAndTreeAlgorithm/trees_binary_search_tree.md)
 
 
 
