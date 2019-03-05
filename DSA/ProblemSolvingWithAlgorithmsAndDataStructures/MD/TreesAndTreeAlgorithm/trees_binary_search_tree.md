@@ -345,13 +345,9 @@ def main():
 以 `put` 方法為例，效能取決於 **Binary Tree 的高度**，也就是 `root` 和`最深 leaf` 的邊的數量。
 
 若按照隨機分配新增 `key`，樹的高度會落在 $$log_{2}n$$。因為假設是隨機分佈 `key`，則會有一半小於 `root`，一半大於 `root`。而第 `d` 層（深度為 `d`）的節點數量是 $$2^d$$。
-$$
-n = 2^0 + 2^1 + ... + 2^d = 2^{d+1}-1
-$$
+$$n = 2^0 + 2^1 + ... + 2^d = 2^{d+1}-1$$
 
-$$
-d = O(log_2{n})
-$$
+$$d = O(log_2{n})$$
 
 其他操作像是 `get`、`in` 和 `del` 同樣受到樹高影響。
 
@@ -363,4 +359,4 @@ $$
 
 #### 參考資料
 
-- [Binary Tree: Traversal (尋訪)](http://alrightchiu.github.io/SecondRound/binary-tree-traversalxun-fang.html): 很精彩的介紹!!
+- [Binary Tree: Traversal (尋訪)](http://alrightchiu.github.io/SecondRound/binary-tree-traversalxun-fang.html): 很精彩的介紹
