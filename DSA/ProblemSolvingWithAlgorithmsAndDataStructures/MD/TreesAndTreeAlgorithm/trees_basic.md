@@ -53,7 +53,9 @@
   - 層數 Level
     - 從根節點到該點所經過的分之數目。
     - 定義：`根節點`的層數為 `0`。
-  - 高度 Height
+  - 節點的高度 Height of Node
+    - 
+  - 樹的高度 Height of Tree
     - 樹中任何節點的最大層數。
 
 ## Tree Definition
