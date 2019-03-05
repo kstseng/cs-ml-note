@@ -54,9 +54,9 @@
     - 從根節點到該點所經過的分之數目。
     - 定義：`根節點`的層數為 `0`。
   - 節點的高度 Height of Node
-    - 此 Node 與最長路徑之後代 leaf node 的 edge 數
+    - 此 Node 與最長路徑之後代 leaf node 的 edge 數 （往 leaf node 數 edge 數）
   - 樹的高度 Height of Tree
-    - 樹中任何節點的最大層數。
+    - Root 的 Height of Node
 
 ## Tree Definition
 
