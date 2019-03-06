@@ -30,9 +30,7 @@
    * [7.Graphs and Graph Algorithm](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/GraphsAndGraphAlgorithm/README.md)
      * [Graphs-Basic](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/GraphsAndGraphAlgorithm/graphs_basic.md)
 
-
-
-  * [參考資料](DSA/dsa_reference.md)
+ * [參考資料](DSA/dsa_reference.md)
 
 * [機器學習算法](ML/README.md)
 
