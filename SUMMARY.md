@@ -28,6 +28,8 @@
        * [Binary Search Tree](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/TreesAndTreeAlgorithm/trees_binary_search_tree.md)
        * [AVL Tree](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/TreesAndTreeAlgorithm/trees_avl.md)
    * [7.Graphs and Graph Algorithm](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/GraphsAndGraphAlgorithm/README.md)
+     * [Graphs-Basic](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/GraphsAndGraphAlgorithm/graphs_basic.md)
+
 
 
 
