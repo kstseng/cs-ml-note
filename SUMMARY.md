@@ -27,6 +27,8 @@
        * [Binary Heaps](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/TreesAndTreeAlgorithm/trees_binary_heap.md)
        * [Binary Search Tree](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/TreesAndTreeAlgorithm/trees_binary_search_tree.md)
        * [AVL Tree](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/TreesAndTreeAlgorithm/trees_avl.md)
+   * [7.Graphs and Graph Algorithm](DSA/ProblemSolvingWithAlgorithmsAndDataStructures/MD/GraphsAndGraphAlgorithm/README.md)
+
 
 
 
