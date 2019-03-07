@@ -1,5 +1,7 @@
 # Reference of ML
 
+* The difference between Joint Probability and Likelihood function
+ * [What is the difference between joint distribution and likelihood function?](https://www.quora.com/What-is-the-difference-between-joint-distribution-and-likelihood-function)
 * Naive Bayes
 * Linear Regression
 * Logitstic Regression
